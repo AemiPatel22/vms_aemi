@@ -19,6 +19,7 @@ class DocumenttypeController extends Controller
 
         );
         $data['plugincss'] = array(
+            'css/select2.min.css',
             'plugins/toastr/toastr.min.css'
         );
         $data['pluginjs'] = array(
@@ -26,7 +27,6 @@ class DocumenttypeController extends Controller
         );
         $data['js'] = array(
             'documentforselect2.js',
-
         );
         $data['funinit'] = array(
 
@@ -54,18 +54,18 @@ class DocumenttypeController extends Controller
                 'error.css'
         );
         $data['plugincss'] = array(
-
+            'css/select2.min.css'
         );
         $data['pluginjs'] = array(
-                'jquery-3.6.0.min.js',
-                 'select2.min.js'
+            'select2.min.js'
         );
         $data['js'] = array(
             'documentforselect2.js',
-              'comman_function.js',
-
+            'comman_function.js',
+            'documenttype.js'
         );
         $data['funinit'] = array(
+            'Documenttype.init()'
 
         );
 
@@ -150,6 +150,7 @@ class DocumenttypeController extends Controller
  }
 
         public function action_doctype(Request $request){
+
             $action = $request->input('action');
 
             switch ($action) {

@@ -13,8 +13,9 @@ class Documenttype extends Model
     public function get_details(){
         return Documenttype::from('document_type')
                         ->select('document_type.id','document_type.document_for','document_type.document_name','document_type.validity_piriod',
-                            'document_type.warn_before','document_type.status','document_type.is_expire')
+                            'document_type.warn_before','document_type.status','document_type.is_expire','document_for.document_for')
                         // ->where('document_type.is_expire','N')
+                        ->join('document_for','document_for.id','=' ,'document_type.id')
                         ->get()
                         ->toArray();
     }
@@ -22,8 +23,9 @@ class Documenttype extends Model
     public function get_documentlist(){
         return Documenttype::from('document_type')
                        ->select('document_type.id','document_type.document_for','document_type.document_name','document_type.validity_piriod',
-                          'document_type.warn_before','document_type.status','document_type.is_expire')
+                          'document_type.warn_before','document_type.status','document_type.is_expire','document_for.document_for')
                         // ->where('document_type.is_expire','N')
+                        ->join('document_for','document_for.id','=' ,'document_type.id')
                         ->get()
                         ->toArray();
 
@@ -68,7 +70,7 @@ class Documenttype extends Model
     public function action_doctype($reqData){
         $objDocumenttype = Documenttype::find($reqData['data_id']);
         if($reqData['action_type'] == 2){
-            $objDocumenttype->is_expire = 'Y';
+            $objDocumenttype->is_deleted= 'Y';
 
         }else{
             if($reqData['action_type'] == 0){
@@ -85,8 +87,9 @@ class Documenttype extends Model
     public function edit_doctypedetails($docID){
         return Documenttype::from('document_type')
                         ->select('document_type.id','document_type.document_for','document_type.document_name','document_type.validity_piriod',
-                              'document_type.warn_before','document_type.status','document_type.is_expire')
+                              'document_type.warn_before','document_type.status','document_type.is_expire','document_for.document_for')
                         // ->where('document_type.is_expire','N')
+                        ->join('document_for','document_for.id','=' ,'document_type.id')
                         ->where('document_type.id',$docID)
                         ->get()
                         ->toArray();
@@ -125,6 +128,8 @@ class Documenttype extends Model
         }
         return 'doc_exits';
     }
+
+
 }
 
 

@@ -56,6 +56,8 @@ Route::get('edit-docentry/{id}',[DocumententryController::class,'edit_docentry']
 Route::post('save-edit-docentry',[DocumententryController::class, 'save_edit_docentry'])->name('save-edit-docentry');
 Route::post('save-docentry',[DocumententryController::class,'save_docentry'])->name('save-docentry');
 Route::get('view-docentry/{id}',[DocumententryController::class, 'view_docentry'])->name('view-docentry');
-
+// Route::post('document-ajax',[DocumententryController::class,'action_document'])->name('document-ajax');
 Route::post('docentry-ajax',[DocumententryController::class,'action_docentry'])->name('docentry-ajax');
+
+Route::post('common-ajax',[DocumententryController::class,'ajaxcall'])->name('common-ajax');
 

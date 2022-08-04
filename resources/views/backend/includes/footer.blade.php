@@ -33,8 +33,17 @@
         $('#loader').show();
         $('#loader').fadeOut(1000);
     });
-    </script>
+</script>
 
 
+<script>
+jQuery(document).ready(function () {
+    @if (!empty($funinit))
+            @foreach ($funinit as $value)
+                {{  $value }}
+            @endforeach
+    @endif
+});
+</script>
 
 

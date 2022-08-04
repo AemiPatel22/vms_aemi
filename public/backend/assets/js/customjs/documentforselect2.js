@@ -104,9 +104,9 @@ $('#employee_form').validate({
 
 
 
-    });
+});
+$('.select2').select2();
 
-    // $('.select2').select2();
 
 
 

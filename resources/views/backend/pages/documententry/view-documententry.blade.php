@@ -37,22 +37,34 @@
                                        <div class="text"><a href="">{{$document_list[0]['document_for']}}</a></div>
                                     </li>
                                     <li>
-                                       <div class="title">Document Name:</div>
-                                       <div class="text"><a href="">{{$document_list[0]['document_name']}}</span></a></div>
+                                       <div class="title">Document Type:</div>
+                                       <div class="text"><a href="">{{$document_list[0]['document_type']}}</span></a></div>
                                     </li>
                                     <li>
-                                       <div class="title">Validity Period:</div>
-                                       <div class="text">{{$document_list[0]['validity_piriod']}}</div>
+                                       <div class="title">Document Of:</div>
+                                       <div class="text">{{$document_list[0]['document_of']}}</div>
                                     </li>
                                     <li>
-                                       <div class="title">Warn Before:</div>
-                                       <div class="text">{{$document_list[0]['warn_before']}}</div>
+                                       <div class="title">Issue Date:</div>
+                                       <div class="text">{{$document_list[0]['issue_date']}}</div>
                                     </li>
                                     <li>
-                                       <div class="title">Is Expire:</div>
+                                        <div class="title">Expire Date:</div>
+                                        <div class="text">{{$document_list[0]['expriy_date']}}</div>
+                                     </li>
+                                     <li>
+                                        <div class="title">Document Number:</div>
+                                        <div class="text">{{$document_list[0]['document_number']}}</div>
+                                     </li><br>
+                                     <li>
+                                        <div class="title">Issue Place:</div>
+                                        <div class="text">{{$document_list[0]['issue_place']}}</div>
+                                     </li>
+                                    <li>
+                                       <div class="title">Is Deleted:</div>
                                        <div class="text">
 
-                                        @if ($document_list[0]['is_expire']=='Y')
+                                        @if ($document_list[0]['is_deleted']=='Y')
                                             Yes
                                         @else
                                            No

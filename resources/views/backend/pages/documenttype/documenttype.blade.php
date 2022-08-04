@@ -61,10 +61,10 @@
                                                 @if ($value['status'] == 'A')
                                                     <a><i class="text-primary fa fa-close doctype-action mr-2"   data-bs-toggle="modal" data-bs-target="#inactiveModal" data-action-type="0" data-id="{{ $value['id']; }}"></i></a>
                                                 @else
-                                                    <a><i class="text-primary fa fa-check doctype-action"   data-bs-toggle="modal" data-bs-target="#activeModal" data-action-type="1" data-id="{{ $value['id']; }}"></i></a>
+                                                    <a><i class="text-primary fa fa-check doctype-action mr-2"   data-bs-toggle="modal" data-bs-target="#activeModal" data-action-type="1" data-id="{{ $value['id']; }}"></i></a>
                                                 @endif
 
-                                                <a><i class="text-danger fa fa-trash doctype-action" data-bs-toggle="modal" data-bs-target="#deleteModal" data-action-type="2" data-id="{{ $value['id']; }}"></i></a>
+                                                <a><i class="text-danger fa fa-trash doctype-action mr-2" data-bs-toggle="modal" data-bs-target="#deleteModal" data-action-type="2" data-id="{{ $value['id']; }}"></i></a>
 
                                 </td>
 

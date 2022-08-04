@@ -15,8 +15,8 @@
 
             <div class="card">
                <div class="card-header">
-                  <h4 class="card-title mb-0">Document Type list</h4>
-                  <a href="{{route('doc-entry')}}"><button type="button"  style="float: right" class="btn btn-primary text-white">Add Document Type</button></a>
+                  <h4 class="card-title mb-0">Add Document</h4>
+                  <a href="{{route('add-docentry')}}"><button type="button"  style="float: right" class="btn btn-primary text-white">Add Document</button></a>
                </div>
                <div class="card-body">
                 @include('backend.includes.flash_message')
@@ -62,12 +62,12 @@
                                                 <a href="{{ route('edit-docentry',$value['id']) }}"><i class="text-warning fa fa-edit mr-2"></i></a>
 
                                                 @if ($value['status'] == 'A')
-                                                    <a><i class="text-primary fa fa-close doctype-action mr-2"   data-bs-toggle="modal" data-bs-target="#inactiveModal" data-action-type="0" data-id="{{ $value['id']; }}"></i></a>
+                                                    <a class="docentry-action" data-bs-toggle="modal" data-bs-target="#inactiveModal" data-action-type="0" data-id="{{ $value['id']; }}"><i class="text-primary fa fa-close  mr-2"></i></a>
                                                 @else
-                                                    <a><i class="text-primary fa fa-check doctype-action"   data-bs-toggle="modal" data-bs-target="#activeModal" data-action-type="1" data-id="{{ $value['id']; }}"></i></a>
+                                                    <a class="docentry-action" data-bs-toggle="modal" data-bs-target="#activeModal" data-action-type="1" data-id="{{ $value['id']; }}"><i class="text-primary fa fa-check mr-2"></i></a>
                                                 @endif
 
-                                                <a><i class="text-danger fa fa-trash doctype-action" data-bs-toggle="modal" data-bs-target="#deleteModal" data-action-type="2" data-id="{{ $value['id']; }}"></i></a>
+                                                <a class="docentry-action" data-bs-toggle="modal" data-bs-target="#deleteModal" data-action-type="2" data-id="{{ $value['id']; }}"><i class="text-danger fa fa-trash mr-2"></i></a>
 
                                 </td>
 
