@@ -27,6 +27,7 @@ class DocumenttypeController extends Controller
         );
         $data['js'] = array(
             'documentforselect2.js',
+            'documenttype.js'
         );
         $data['funinit'] = array(
 
@@ -77,7 +78,8 @@ class DocumenttypeController extends Controller
             'title' => 'Dashboard',
             'breadcrumb' => array(
                 'Dashboard' => route('dashboard'),
-                'Document Type' => 'doc-type',
+                'Document Type' => route('doc-type'),
+                'Add Document Type' =>'add-doctype',
             )
         );
         return view('backend.pages.documenttype.add-documenttype',$data);

@@ -13,9 +13,9 @@ class Documenttype extends Model
     public function get_details(){
         return Documenttype::from('document_type')
                         ->select('document_type.id','document_type.document_for','document_type.document_name','document_type.validity_piriod',
-                            'document_type.warn_before','document_type.status','document_type.is_expire','document_for.document_for')
+                            'document_type.warn_before','document_type.status','document_for.id as d_for_id','document_type.is_expire','document_for.document_for')
                         // ->where('document_type.is_expire','N')
-                        ->join('document_for','document_for.id','=' ,'document_type.id')
+                        ->join('document_for','document_for.id','=' ,'document_type.document_for')
                         ->get()
                         ->toArray();
     }
@@ -23,7 +23,7 @@ class Documenttype extends Model
     public function get_documentlist(){
         return Documenttype::from('document_type')
                        ->select('document_type.id','document_type.document_for','document_type.document_name','document_type.validity_piriod',
-                          'document_type.warn_before','document_type.status','document_type.is_expire','document_for.document_for')
+                          'document_type.warn_before','document_type.status','document_for.id as d_for_id','document_type.is_expire','document_for.document_for')
                         // ->where('document_type.is_expire','N')
                         ->join('document_for','document_for.id','=' ,'document_type.id')
                         ->get()

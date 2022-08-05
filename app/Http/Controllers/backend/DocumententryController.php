@@ -83,7 +83,8 @@ class DocumententryController extends Controller
             'title' => 'Dashboard',
             'breadcrumb' => array(
                 'Dashboard' => route('dashboard'),
-                'Document Entry' => 'doc-entry',
+                'Document Entry' => route('doc-entry'),
+                'Add Document Entry' => 'add-docentry'
             )
         );
         return view('backend.pages.documententry.add-documententry',$data);

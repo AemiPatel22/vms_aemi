@@ -34,7 +34,7 @@
                                     <select class="form-control select2" name="document_for" id="document_for">
                                         <option value="">Select Document type</option>
                                         @foreach ($document_list as $key => $value)
-                                            <option value="{{ $value['document_for'] }}"> {{ $value['document_for'] }} </option>
+                                            <option value="{{ $value['d_for_id'] }}"> {{ $value['document_for'] }} </option>
                                       @endforeach
                                     </select>
                             </div>

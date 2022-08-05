@@ -99,7 +99,18 @@ $('#employee_form').validate({
             form.submit();
         },
         errorPlacement: function(error, element) {
-            error.insertAfter(element);
+            var elem = $(element);
+            if (element.attr("type") == "checkbox") {
+                element = elem.parent();
+                error.insertAfter(element);
+            } else {
+                if (elem.hasClass("select2")) {
+                    element = $("#select2-" + elem.attr("id") + "-container").parent();
+                    error.insertAfter(element);
+                } else {
+                    error.insertAfter(element);
+                }
+            }
         },
 
 
