@@ -33,8 +33,8 @@
 
                                     <select class="form-control select2" name="document_for" id="document_for">
                                         <option value="">Select Document</option>
-                                        @foreach ($document_list as $key => $value)
-                                            <option value="{{ $value['d_for'] }}"> {{ $value['document_for'] }} </option>
+                                        @foreach ($document_for as $key => $value)
+                                            <option value="{{ $value['id'] }}"> {{ $value['document_for'] }} </option>
                                       @endforeach
                                     </select>
                             </div>
@@ -47,9 +47,7 @@
                              <label class="form-label text-dark">Document Type<span class="text-danger">*</span></label>
                              <select class="form-control select2" name="document_type" id="document_type">
                                 <option value="">Select Document Type</option>
-                                @foreach ($document_list as $key => $value)
-                                    <option value="{{ $value['document_type'] }}"> {{ $value['d_type'] }} </option>
-                              @endforeach
+
                             </select>
                           </div>
                        </div>
@@ -62,9 +60,7 @@
                             <label class="form-label text-dark">Document Of<span class="text-danger">*</span></label>
                             <select class="form-control select2" name="document_of" id="document_of">
                                <option value="">Select Document</option>
-                               @foreach ($document_list as $key => $value)
-                                   <option value="{{ $value['document_of'] }}"> {{ $value['d_of'] }} </option>
-                             @endforeach
+
                            </select>
                          </div>
                        </div>

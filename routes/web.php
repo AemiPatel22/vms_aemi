@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\RagistrationController;
 use App\Http\Controllers\backend\DocumenttypeController;
 use App\Http\Controllers\backend\DocumententryController;
+use App\Http\Controllers\backend\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,10 @@ Route::get('/', function () {
 
 Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
 Route::get('login',[LoginController::class,'login'])->name('login');
+// Route::get('login',[AuthController::class,'index'])->name('login');
+
 Route::get('register',[RagistrationController::class,'register'])->name('register');
+Route::get('register',[AuthController::class,'ragister1'])->name('register');
 
 Route::get('category',[CategoryController::class,'category'])->name('category');
 

@@ -45,7 +45,7 @@ $('body').on('change','#document_type',function(){
 
             for(var i = 0; i < output.length; i++){
                 var temp = '';
-                temp = '<option value="'+ output[i]['document_of']+'">'+ output[i]['document_of'] +'</option>';
+                temp = '<option value="'+ output[i]['id']+'">'+ output[i]['document_of'] +'</option>';
                 html = html + temp;
             }
             $("#document_of").html(html);

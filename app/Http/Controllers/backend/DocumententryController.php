@@ -64,7 +64,7 @@ class DocumententryController extends Controller
         );
         $data['js'] = array(
             'comman_function.js',
-             'documenttype.js',
+            'documenttype.js',
             'doc_entry.js',
             'document.js'
 
@@ -73,11 +73,9 @@ class DocumententryController extends Controller
             'Documenttype.init()'
         );
 
-        $objDocumententry = new Documententry();
-        $data['document_list'] = $objDocumententry -> get_entrytlist();
+        $objDocumentfor = new Documentfor();
+        $data['document_for'] = $objDocumentfor ->get_docfor_list();
 
-        $objdocfor = new Documentfor();
-        $data['list'] = $objdocfor -> get_docfor_list();
 
         $data['header'] = array(
             'title' => 'Dashboard',

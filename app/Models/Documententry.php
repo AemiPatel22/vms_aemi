@@ -39,32 +39,22 @@ class Documententry extends Model
     }
 
     public function add_docentry($requestData){
-        $checkdocentry = Documententry::where('document_entry.document_type',$requestData['document_type'])->count();
 
-        if($checkdocentry == 0)
-        {
-            $objDocumententry = new Documententry();
-
-
-
-            $objDocumententry->document_for = $requestData['document_for'];
-            $objDocumententry->document_type = $requestData['document_type'];
-            $objDocumententry->document_of = $requestData['document_of'];
-            $objDocumententry->issue_date = $requestData['issue_date'];
-            $objDocumententry->expriy_date = $requestData['expriy_date'];
-            $objDocumententry->document_number = $requestData['document_number'];
-            $objDocumententry->issue_place = $requestData['issue_place'];
-            $objDocumententry->status = $requestData['status'];
-
-
-
-            if($objDocumententry->save()){
-                return 'true';
-            }else{
-                return 'false';
-            }
+        $objDocumententry = new Documententry();
+        $objDocumententry->document_for = $requestData['document_for'];
+        $objDocumententry->document_type = $requestData['document_type'];
+        $objDocumententry->document_of = $requestData['document_of'];
+        $objDocumententry->issue_date = $requestData['issue_date'];
+        $objDocumententry->expriy_date = $requestData['expriy_date'];
+        $objDocumententry->document_number = $requestData['document_number'];
+        $objDocumententry->issue_place = $requestData['issue_place'];
+        $objDocumententry->status = $requestData['status'];
+        if($objDocumententry->save()){
+            return 'true';
+        }else{
+            return 'false';
         }
-        return 'doc_exits';
+
     }
 
     public function action_docentry($reqData){
