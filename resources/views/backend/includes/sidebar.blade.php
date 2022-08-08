@@ -28,6 +28,11 @@ $currentRoute = Route::current()->getName();
                         <i class="la la-file-text"></i> <span> Document Entry</span>
                     </a>
                 </li>
+                <li class="{{ $currentRoute == 'export-data'  ? 'active' : ''}}">
+                    <a href="{{route('export-data')}}">
+                        <i class="la la-external-link-square"></i> <span>Export Data</span>
+                    </a>
+                </li>
 
 
 

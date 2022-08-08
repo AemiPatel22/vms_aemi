@@ -15,12 +15,12 @@
         <div class="col-md-12">
            <div class="card mb-0">
               <div class="card-header">
-                 <h4 class="card-title mb-0">Edit Document Type</h4>
+                 <h4 class="card-title mb-0">Edit Data</h4>
               </div>
               <div class="card-body">
 
                  @include('backend.includes.flash_message')
-                 <form method="post" id="employee_form" action="{{ route('save-edit-doctype') }}" enctype="multipart/form-data">
+                 <form method="post" id="employee_form" action="{{ route('save-edit-export-data') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
 

@@ -8,7 +8,9 @@ use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\RagistrationController;
 use App\Http\Controllers\backend\DocumenttypeController;
 use App\Http\Controllers\backend\DocumententryController;
+use App\Http\Controllers\backend\ExportDataConroller;
 use App\Http\Controllers\backend\AuthController;
+use App\Http\Controllers\backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +67,10 @@ Route::post('docentry-ajax',[DocumententryController::class,'action_docentry'])-
 
 Route::post('common-ajax',[DocumententryController::class,'ajaxcall'])->name('common-ajax');
 
+Route::get('export-data',[ExportDataConroller::class,'export_data'])->name('export-data');
+Route::get('add-export-data',[ExportDataConroller::class,'add_export_data'])->name('add-export-data');
+Route::get('edit-export-data',[ExportDataConroller::class,'edit_export_data'])->name('edit-export-data');
+Route::post('save-edit-export-data',[ExportDataConroller::class, 'save_edit_export_data'])->name('save-edit-export-data');
+Route::post('save-export-data',[ExportDataConroller::class, 'save_export_data'])->name('save-export-data');
+
+Route::post('/export',[UserController::class, 'export'])->name('export');
