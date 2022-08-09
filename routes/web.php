@@ -9,6 +9,8 @@ use App\Http\Controllers\backend\RagistrationController;
 use App\Http\Controllers\backend\DocumenttypeController;
 use App\Http\Controllers\backend\DocumententryController;
 use App\Http\Controllers\backend\ExportDataConroller;
+use App\Http\Controllers\backend\ImportController;
+use App\Http\Controllers\backend\PDFController;
 use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\UserController;
 
@@ -73,4 +75,12 @@ Route::get('edit-export-data',[ExportDataConroller::class,'edit_export_data'])->
 Route::post('save-edit-export-data',[ExportDataConroller::class, 'save_edit_export_data'])->name('save-edit-export-data');
 Route::post('save-export-data',[ExportDataConroller::class, 'save_export_data'])->name('save-export-data');
 
-Route::post('/export',[UserController::class, 'export'])->name('export');
+Route::get('/export',[UserController::class, 'export'])->name('export');
+
+Route::get('import-data',[ImportController::class,'importForm'])->name('import-data');
+Route::post('/import',[ImportController::class, 'import'])->name('import');
+
+Route::get('/pdfdata',[PDFController::class, 'get_details'])->name('pdfdata');
+Route::get('/download-pdf',[PDFController::class, 'download_pdf'])->name('download-pdf');
+
+

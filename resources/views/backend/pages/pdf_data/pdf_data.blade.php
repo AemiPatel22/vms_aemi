@@ -17,10 +17,13 @@
         <div class="card">
            <div class="card-header">
 
-              <h4 class="card-title mb-0">Add Data</h4>
-              <a href="{{route('add-export-data')}}"><i class="fa fa-plus-square fa-2x text-primary m-1" style="float: right" aria-hidden="true"></i></a>
-              <a  href="{{ route('export') }}"><i class="fa fa-file-excel-o fa-2x text-success m-1" style="float: right" aria-hidden="true"></i></a>
-          </div>
+              <h4 class="card-title mb-0">Add PDF Data</h4>
+              <a href="{{route('download-pdf')}}"><i class="fa fa-file-pdf-o fa-2x text-danger mr-3" style="float: right" aria-hidden="true"></i></a>
+
+
+
+
+           </div>
            <div class="card-body">
             @include('backend.includes.flash_message')
               <div class="table-responsive">
@@ -40,7 +43,7 @@
                         @php
                         $srno = 1;
                         @endphp
-                        @foreach ($export_data_list as $key => $value)
+                        @foreach ($pdf_data_list as $key => $value)
                        <tr>
                         <td>{{ $srno }}</td>
                         <td>{{ $value['first_name']}}</td>

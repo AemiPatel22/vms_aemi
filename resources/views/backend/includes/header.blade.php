@@ -8,7 +8,7 @@
 	<title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}" />
     <meta name="keywords" content="{{ $keywords }}" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/backend/assets/img/favicon.png') }}">
 
 	<link rel="stylesheet" href="{{ asset('public/backend/assets/css/bootstrap.min.css') }}">

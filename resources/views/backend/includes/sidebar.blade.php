@@ -33,6 +33,16 @@ $currentRoute = Route::current()->getName();
                         <i class="la la-external-link-square"></i> <span>Export Data</span>
                     </a>
                 </li>
+                <li class="{{ $currentRoute == 'import-data'  ? 'active' : ''}}">
+                    <a href="{{route('import-data')}}">
+                        <i class="la la-external-link-square"></i> <span>Import Data</span>
+                    </a>
+                </li>
+                <li class="{{ $currentRoute == 'pdfdata'  ? 'active' : ''}}">
+                    <a href="{{route('pdfdata')}}">
+                        <i class="la la-external-link-square"></i> <span>PDF Data</span>
+                    </a>
+                </li>
 
 
 

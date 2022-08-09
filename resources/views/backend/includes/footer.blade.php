@@ -11,7 +11,7 @@
 
 <script src="{{ asset('public/backend/assets/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('public/backend/assets/js/chart.js') }}"></script>
-
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
 <script src="{{ asset('public/backend/assets/js/app.js') }}"></script>
 @if (!empty($js))

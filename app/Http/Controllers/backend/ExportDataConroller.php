@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Config;
 use App\Models\Exportdata;
+use App\Exports\StudentExport;
 
 class ExportDataConroller extends Controller
 {
