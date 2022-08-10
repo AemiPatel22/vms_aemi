@@ -13,6 +13,8 @@ use App\Http\Controllers\backend\ImportController;
 use App\Http\Controllers\backend\PDFController;
 use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\UserController;
+use App\Http\Controllers\backend\QrCodeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -83,4 +85,4 @@ Route::post('/import',[ImportController::class, 'import'])->name('import');
 Route::get('/pdfdata',[PDFController::class, 'get_details'])->name('pdfdata');
 Route::get('/download-pdf',[PDFController::class, 'download_pdf'])->name('download-pdf');
 
-
+Route::get('/qrcode', [QrCodeController::class, 'index'])->name('qrcode');

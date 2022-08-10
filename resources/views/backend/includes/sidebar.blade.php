@@ -10,37 +10,43 @@ $currentRoute = Route::current()->getName();
             <ul>
                 <li class="{{ $currentRoute == 'dashboard'  ? 'active' : ''}}">
                     <a href="{{route('dashboard')}}">
-                        <i class="la la-dashboard"></i> <span> Dashboard</span>
+                        <i class="fa fa-dashboard"></i> <span> Dashboard</span>
                     </a>
                 </li>
                 <li class="{{ $currentRoute == 'category'  ? 'active' : ''}}">
                     <a href="{{route('category')}}">
-                        <i class="la la-object-ungroup"></i> <span> Category</span>
+                        <i class="fa fa-list-alt"></i> <span> Category</span>
                     </a>
                 </li>
                 <li class="{{ $currentRoute == 'doc-type'  ? 'active' : ''}}">
                     <a href="{{route('doc-type')}}">
-                        <i class="la la-file-text"></i> <span> Document Type</span>
+                        <i class="fa fa-file"></i> <span> Document Type</span>
                     </a>
                 </li>
                 <li class="{{ $currentRoute == 'doc-entry'  ? 'active' : ''}}">
                     <a href="{{route('doc-entry')}}">
-                        <i class="la la-file-text"></i> <span> Document Entry</span>
+                        <i class="fa fa-file-text-o"></i> <span> Document Entry</span>
                     </a>
                 </li>
                 <li class="{{ $currentRoute == 'export-data'  ? 'active' : ''}}">
                     <a href="{{route('export-data')}}">
-                        <i class="la la-external-link-square"></i> <span>Export Data</span>
+                        <i class="fa fa-file"></i> <span>Export Data</span>
                     </a>
+
                 </li>
                 <li class="{{ $currentRoute == 'import-data'  ? 'active' : ''}}">
                     <a href="{{route('import-data')}}">
-                        <i class="la la-external-link-square"></i> <span>Import Data</span>
+                        <i class="fa fa-file"></i> <span>Import Data</span>
                     </a>
                 </li>
                 <li class="{{ $currentRoute == 'pdfdata'  ? 'active' : ''}}">
                     <a href="{{route('pdfdata')}}">
-                        <i class="la la-external-link-square"></i> <span>PDF Data</span>
+                        <i class="fa fa-file-pdf-o"></i> <span>PDF Data</span>
+                    </a>
+                </li>
+                <li class="{{ $currentRoute == 'qrcode'  ? 'active' : ''}}">
+                    <a href="{{route('qrcode')}}">
+                        <i class="fa fa-qrcode"></i> <span>QR Code</span>
                     </a>
                 </li>
 
